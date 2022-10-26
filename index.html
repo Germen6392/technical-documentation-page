@@ -7,6 +7,406 @@
 </head>
 <body>
 <nav id="navbar">
+      <header>Documentación de Vim</header>
+      <ul>
+        <li><a class="nav-link" href="#Introduccion">Introduccion</a></li>
+        <li>
+          <a class="nav-link" href="#Modos">Modos</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Crea_tu_primer_archivo">Crea tu primer archivo</a>
+        </li>
+        <li><a class="nav-link" href="#Copiar_y_pegar_ficheros">Copiar y pegar ficheros</a></li>
+        <li><a class="nav-link" href="#Trabajar_con_ficheros">Trabajar con ficheros</a></li>
+        <li>
+          <a class="nav-link" href="#Atajos_de_teclado">Atajos de teclado</a>
+        </li>
+        <li><a class="nav-link" href="#Trabajar_con_tab">Trabajar con tab</a></li>
+        <li>
+          <a class="nav-link" href="#Plugins">Plugins</a>
+        </li>
+        <li><a class="nav-link" href="#Complementos">Complementos</a></li>
+        <li><a class="nav-link" href="#Instalacion_manual">Instalacion manual</a></li>
+        <li>
+          <a class="nav-link" href="#Gestor_de_paquetes">Gestor de paquetes</a>
+        </li>
+        <li><a class="nav-link" href="#Actualizar_plugins">Actualizar plugins</a></li>
+        <li>
+          <a class="nav-link" href="#Restablecer_plugins">Restablecer plugins</a>
+        </li>
+        <li><a class="nav-link" href="#Referencias">Referencias</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introduccion">
+        <header>Introduccion</header>
+        <article>
+          <p>
+            Vim es un editor de texto de código abierto multiplataforma que se caracteriza por trabajar directamente en una consola siendo el más ligero del mercado.
+Posee atajos que harán que el usuario pueda escribir su código más cómodo sin necesidad de utilizar el ratón.
+En este documento veremos cómo comenzar con este editor, cómo manejarse en la línea de comandos para crear,abrir,modificar y eliminar archivos tanto con Vim como en la terminal de Linux con la que estaremos trabajando.
+
+          </p>
+
+          <p>
+          En Vim podemos encontrar ventajas con otros editores de texto, la cual la enumeraremos a continuación:        
+     
+           
+           
+          </p>
+          <ul>
+            <li>
+              Aumenta tu productividad una vez que se supera la curva del aprendizaje.Las combinaciones de teclas se pueden memorizar empleando métodos mnemotécnicos, pues guardan relación con palabras inglesas. La complejidad intrínseca de aprender las instrucciones se ve recompensada por la mejora en la eficiencia. Los usuarios expertos pueden, usando unas pocas combinaciones de teclas, copiar texto, formatearlo u ordenarlo de muchas formas diferentes, que sólo se pueden realizar en la mayoría de editores mediante operaciones considerablemente más complejas. Basta con un poco de experiencia para notar que las combinaciones de instrucciones que permiten ediciones de texto complejas se facilitan con Vim. Por otra parte las nuevas versiones permiten emplear el ratón e incorporan menús gráficos, que facilitan trabajar con Vim de una forma similar a la de otros editores. A menudo se instala como editor base por su pequeño tamaño y su rapidez en plataformas con recursos limitados basadas en UNIX.
+
+            </li>
+            <li>
+              Se puede ejecutar en muchos sistemas operativos. Esto es importante para usuarios, como por ejemplo administradores de sistemas que deben trabajar en muchas plataformas distintas. Se puede ejecutar en los siguientes sistemas operativos: AmigaOS, Atari MiNT, BeOS, DOS, GNU/Linux, Mac OS, NextStep, OS/2, OSF, RISC OS, IRIX, Unix (muchas variedades, como por ejemplo BSD, AIX y HP-UX), VMS, y Windows 3.x/95/98/ME/2000/NT/XP.
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="Modos">
+        <header>Modos</header>
+        <article>
+          <p>Vim es un editor modal, lo que significa que se puede trabajar en diferentes modos para realizar una tarea determinada. Para ver en qué modo se encuentra Vim se debe de tener activada la opción showmode. A continuación se describen los seis modos de Vim.Los tres primeros son los modos del vi original. Los cinco modos adicionales no deben entenderse por separado, sino en combinación con el modo base.</p>
+
+          <ul>
+            <li>
+              Vim empieza en modo comando, también conocido como modo normal. En este modo se pueden emplear combinaciones de teclas para, por ejemplo, copiar líneas y trabajar en el formato del texto. Éste es el modo central, desde el que se cambia a los otros modos.Si no se sabe qué se está haciendo, pulsando dos veces la tecla Escape siempre se puede volver al modo normal. Si ya se estaba en modo normal y tanto la configuración de Vim como la del terminal lo permiten, Vim emite un pitido.
+              Visita esta sección de atajos de teclado en el siguiente enlace:
+<a href:"https://geekland.eu/atajos-de-teclado-y-comandos-para-usar-vim-eficientemente/">Toca aquí para más información</a>
+.
+            </li>
+            <li>En modo inserción cuando se pulsan las teclas se edita el texto como en otros editores. Se puede cambiar del modo comandos al modo inserción pulsando la tecla i. Hay un gran abanico de comandos para pasar al modo inserción, que difieren sustancialmente, pues permiten por ejemplo editar al final de la línea, en un punto concreto del texto, editar borrando una palabra, entre muchas otras.18​ Un usuario experto puede sacar un gran provecho de la existencia de esta variedad de órdenes.
+En el modo inserción todas las teclas tienen alguna función además de la mera inserción, que se activan pulsando simultáneamente las teclas Tecla control o Mayúsculas. La tecla Esc es muy importante en modo inserción, pues permite cambiar de modo inserción a modo comandos.
+Cambiando al modo comandos para realizar ciertas tareas se incrementa en gran medida la eficiencia en la edición, y se puede aprovechar la potencia completa de Vim.
+Visita esta sección de atajos de teclado en el siguiente enlace:
+
+<a href:"https://geekland.eu/atajos-de-teclado-y-comandos-para-usar-vim-eficientemente/">Toca aquí para más información</a>
+</li>
+            <li>
+             Modo Línea de Órdenes:A este modo se accede pulsando la tecla dos puntos :. Tras los dos puntos se pueden introducir órdenes complejas, como por ejemplo buscar y reemplazar con expresiones regulares. Pulsando la tecla Esc se puede volver al modo órdenes. Las búsquedas se pueden realizar con la orden / (hacia adelante) y ? (hacia atrás). También se pueden filtrar líneas mediante !.
+Visita esta sección de atajos de teclado en el siguiente enlace:
+
+<a href:"https://geekland.eu/atajos-de-teclado-y-comandos-para-usar-vim-eficientemente/">Toca aquí para más información</a>
+            </li>
+            <li>
+            Modo Visual: Este modo es una mejora respecto a vi. Mediante unas ciertas combinaciones de teclas en combinación con las teclas de movimiento del cursor, se puede marcar un área de texto, ya sea un grupo de líneas o un bloque. Una vez se tiene el texto marcado se pueden usar órdenes del modo comandos para manipularlo. Las operaciones que se pueden realizar en este modo son más simples que las del modo comandos.
+            </li>
+            <li>
+            Modo Selección:Este modo empieza como el modo visual, pues hay que seleccionar un bloque de texto. Tras la selección, se puede cambiar al modo selección mediante Control-G. Una vez en el modo, si se pulsa una tecla imprimible, el texto seleccionado se borra, se termina el modo selección y aparece el símbolo correspondiente a la tecla pulsada. La selección se puede extender pulsando mayúsculas y las teclas de flechas, el comportamiento habitual en los programas de Microsoft Windows. Este modo se puede finalizar pulsando la tecla Escape.
+            </li>
+            <li>
+            Modo Ex: Este modo se asemeja al modo línea de órdenes, con la diferencia de que tras la ejecución de una orden no se vuelve al modo comandos. Se entra en este modo pulsando Q y se termina con vi. En este modo Vim imita al editor de UNIX ex, que manipulaba el texto línea a línea debido a las limitaciones de la época, en lugar de editar toda la página.
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="Crea_tu_primer_archivo">
+        <header>Crea tu primer archivo</header>
+        <article>
+          <p>
+            Pensaba dejarle una serie de atajos de teclado, pero creo que sería mucho más práctico si les mostrara cómo funciona mediante un ejemplo. Lo primero que haremos es instalar VIM si no lo hemos hecho ya, o si no viene por defecto en nuestra distribución favorita. Una vez instalado, abrimos un terminal y ponemos:</p>
+            <code>
+            $ vim prueba.txt
+            </code>
+            <p>
+            Ahora oprimimos la tecla I o la tecla Insert para pasar del modo comando al modo edición y comenzar a escribir. Escribimos cualquier cosa, si es posible, que tenga más de dos líneas.
+            </p>
+            <p>Ahora bien, oprimimos la tecla ESC para salir del modo edición, nos movemos al principio del documento con las flechas del teclado y oprimimos la tecla V. Se fijarán que abajo dice ahora VISUAL. Con la flecha de abajo vamos marcando todo el texto que escribimos. Cuando lo tengamos todo seleccionado, oprimimos la tecla Y. Una vez hecho esto, verán que abajo nos indica la cantidad de líneas copiadas.
+Ahora nos movemos un poco más abajo y oprimimos la tecla P. Cada vez que la oprimamos, se pegará el mismo texto. Si en vez de la tecla Y oprimimos la tecla X, el texto que seleccionamos se cortará. Lo podemos volver a pegar con la tecla P.
+Ahora vamos a guardar el documento de prueba. Oprimimos ESC si estamos en modo de edición y escribimos <code>:w</code>, o sea, dos puntos y una W. Esto lo que hace es escribir o guardar lo que estamos haciendo. Si posteriormente escribimos :q saldremos del editor. Si lo que queremos es guardar y cerrar, escribimos <code> :wq</code>
+           </p>
+
+        </article>
+      </section>
+      <section class="main-section" id="Copiar_y_pegar_ficheros">
+        <header>Copiar y pegar ficheros</header>
+        <article>
+         Para copiar una única línea en el editor VIM es tan sencillo como estar en modo comando (pulsando la tecla ESC) y presionar dos veces la letra «yy». Una vez copiada la línea la tendremos almacenada en una especie de portapapeles dentro de VIM y cuando queramos pegarla, deberemos poner el cursor en la línea que queramos que esté justo encima de la que vamos a pegar y pulsar una vez la tecla «p».
+       Para cortar una única línea en el editor VIM es igual de sencillo que copiar, y debes estar en modo comando (pulsando la tecla ESC). A continuación debes presionar dos veces la letra «dd». Una vez cortada la línea estará almacenada en una especie de portapapeles dentro de VIM y cuando queramos pegarla, deberemos poner el cursor en la línea que queramos que esté justo encima de la que vamos a pegar y pulsar una vez la tecla «p».
+Para cortar o copiar varias línea al mismo tiempo en el editor VIM deberemos utilizar la letra «y» cuando quieras copiar y la letra «d» cuando quieras pegar.es Debes estar en modo comando (pulsando la tecla ESC) y posicionarte en la primera línea que deseas realizar la acción. A continuación debes presionar la letra del comando y el numero de líneas además de la que ya estás posicionado, y después la flecha del teclado hacia arriba o hacia abajo según hacia donde se quiera realizar la acción. Por ejemplo:
+<ul>
+<li>Copiar 3 líneas hacia abajo desde el cursor, el comando sería <code> y2🠗</code></li>
+<li>Cortar 5 líneas hacia arriba desde el cursor, el comando sería <code> d4🠕</code></li>
+</ul>
+Una vez cortadas o copiadas estarán almacenadas en el portapapeles dentro de VIM y cuando queramos pegarla, deberemos poner el cursor en la línea que queramos que esté justo encima de la que vamos a pegar y pulsar una vez la tecla «p».
+       </article>
+      </section>
+      <section class="main-section" id="Trabajar_con_ficheros">
+        <header>Trabajar con ficheros</header>
+        <p>
+          Abrir documentos en VIM y moverse entre los distintos ficheros abiertos en los buffers:
+          VIM permite tener varios documentos/buffers abiertos de forma simultanea. Una vez abiertos podemos usar una serie de comandos para navegar entre los distintos ficheros abiertos. Para ello deberemos usar las siguientes instrucciones.
+Nota: Un buffer es el contenido de un fichero de texto cargado en memoria listo para ser editado. En el momento que se guarden los cambios realizados en el buffer se escribirá el fichero que contiene el código editado.
+        </p>
+      </section>
+      <section class="main-section" id="Atajos_de_teclado">
+        <header>Atajos de Teclado</header>
+        <article>
+          Función:
+          <p>
+           Abrir un fichero adicional dentro de VIM. El fichero abierto se mostrará en pantalla justo al abrirlo . Podemos tener abiertos varios documentos al mismo tiempo.<code>:e+ nombre_fichero por abrir</code>
+          </p>
+          Función:
+          <p>
+            Añadir un buffer sin que sea mostrado en pantalla.
+            <code>:badd + nombre_del_fichero/buffer</code>
+          </p>
+          Función:
+          <p>
+            Lista y numera todos los buffers/ficheros que tenemos abiertos.<code> :ls</code>
+          </p>
+           Función:
+          <p>
+            Ir al siguiente fichero/buffer que tenemos abierto. (Buffer_next).<code>:bn</code>
+          </p>
+           Función:
+          <p>
+            Ir al fichero/buffer anterior que tenemos abierto. (Buffer_previous)<code>:bp</code>
+          </p>
+           Función:
+          <p>
+            Para ver en pantalla el último buffer abierto.<code>:bl</code>
+          </p>
+           Función:
+          <p>
+            Mostrar en pantalla el primer buffer abierto.<code>:bf</code>
+          </p>
+          Función:
+          <p>
+            Si anteriormente hemos listado los buffer vemos que tienen asociado un número. Para cambiar de buffer podemos ejecutar el comando :b seguido del número de buffer. Por ejemplo :b2<code>:b_número_buffer</code>
+          </p>
+          Función:
+          <p>
+            Cerrar únicamente el fichero/buffer actual que estamos editando.<code>:bd</code>
+          </p>
+           Función:
+          <p>
+            El comando :bd2 cierra el buffer 2.<code>:bd2</code>
+          </p>
+           Función:
+          <p>
+            El comando :bd deuda.py cierra el buffer deuda.py.<code>:bd deuda.py</code>
+          </p>
+           Función:
+          <p>
+            Mostrar todos los buffer en pantalla.<code>:ba</code>
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="Trabajar_con_tab">
+        <header>Trabajar con tab</header>
+        <article>
+          <p>
+            VIM permite trabajar con tabs (pestañas) similares a las que usaríamos en un navegador web. En cada una de las pestañas podemos tener abierto un fichero/buffer para poder editar código o texto. Los atajos de teclado y comandos que podemos usar para trabajar con las pestañas son:
+          </p>
+           Función:
+          <p>
+            Abrir un fichero en una pestaña nueva.<code>:tabnew nombre_fichero</code>
+          </p>
+           Función:
+          <p>
+            El fichero que queramos se abre en una pestaña nueva.
+          </p>
+          <code>:tabedit nombre_fichero</code>
+           Función:
+          <p>
+          Abre el fichero que queramos en una pestaña nueva. A medida que escribamos el nombre, si presionamos TAB se autocompletará el nombre del fichero. Solo autocompletará con nombres de ficheros que estén dentro de la ruta especificada en el path de VIM.
+          </p>
+          <code>:tabfind nombre_fichero</code>
+          Función
+          <p>
+            Todos los buffers abiertos se ponen en pestañas
+          </p>
+          <code>:gt</code>
+          Función
+          <p>
+            Se desplaza entre las distintas pestañas hacia adelante
+          </p>
+          <code>:gT</code>
+Función
+          <p>
+            Se desplaza entre las distintas pestañas hacia atrás
+          </p>
+          <code>:tab ball</code>
+Función
+          <p>
+            Todos los buffers abiertos se ponen en pestañas
+          </p>
+          <code>:tab ball</code>
+Función
+          <p>
+            Todos los buffers abiertos se ponen en pestañas
+          </p>
+          <code>:tab ball</code>
+Función
+          <p>
+            Todos los buffers abiertos se ponen en pestañas
+          </p>
+          <code>:tab ball</code>
+Función
+          <p>
+            Todos los buffers abiertos se ponen en pestañas
+          </p>
+          <code>:tab ball</code>
+Función
+          <p>
+            Todos los buffers abiertos se ponen en pestañas
+          </p>
+          <code>:tab ball</code>
+
+           
+        </article>
+      </section>
+      <section class="main-section" id="Plugins">
+        <header>Plugins</header>
+        <article>
+          <p>
+            Vim es un editor de texto con muchas opciones ya de manera predeterminada, pero quizás debido a tareas que realizamos, o a nuestra forma de trabajar, a veces necesitamos que haga alguna tarea extra que no viene «de serie».
+Para solucionar esas carencias o para sacarle todo el potencial a Vim están los complementos o «plugins» (de ahora en adelante utilizaré la palabra plugin) una forma de añadir funcionalidades extra al editor Vim y hacer que este se adapte a nuestras necesidades o para facilitarnos ciertas tareas.
+Hay plugins para Vim para diferentes tareas, veamos en este tutorial cómo instalarlos de manera manual o mediante un gestor de plugins.
+Este artículo es una traducción de un artículo en inglés escrito por Seth Kenlon que puedes leer en la web opensource.com y publicado bajo licencia CC-by-sa. Me pareció interesante y quise publicarlo en mi web para que formara parte de la serie de tutoriales sobre Vim que voy publicando y que puedes encontrar en este enlace:
+
+
+https://victorhckinthefreeworld.com/tag/vim/
+
+Ya sea que los instales de forma manual o mediante un gestor de paquetes, los plugins para Vim te pueden ayudar a crear el Vim perfecto que mejor se adapte a tu forma de trabajo.
+Aunque Vim es rápido y eficiente, con las opciones predeterminadas, no es más que un mero editor de texto. Al menos, eso es lo que sería sin ningún complemento o «plugins», que son creados para Vim y añaden funcionalidades extra para hacer que sea mucho más que una ventana en la que escribir texto.
+Con la mezcla adecuada de plugins, puedes tener el control de tu vida y forjarte tu propia y única experiencia con Vim. Puedes personalizar tu tema y puedes añadir resaltado de sintaxis, depurado de código, gestión de versiones y mucho más.
+       </p>
+        </article>
+      </section>
+      <section class="main-section" id="Complementos">
+        <header>Complementos</header>
+        <article>
+          <p>
+            Vim es extensible gracias a los plugins, pero durante mucho tiempo, no había un método oficial para instalarlos. A partir de la serie 8.x de Vim, sin embargo, existe una estructura sobre cómo los plugins tienen que ser y cómo cargarlos.
+Puede que encuentres instrucciones antiguas en algún proyecto en la red o en los archivos README, pero mientras que estés ejecutando una versión de Vim 8 o superior, deberías instalarlos de acuerdo al método oficial de instalación de plugins o con un gestor de paquetes de Vim.
+Puedes utilizar un gestor de paquetes de Vim independientemente de qué versión ejecutes (incluyendo versiones más antiguas que la 8.x), lo que hace el proceso de instalación más sencillo que mantener las actualizaciones por ti mismo.
+Es bueno conocer tanto el método manual como automatizado, así que sigue leyendo para aprender ambos.
+          </p>
+
+        </article>
+      </section>
+      <section class="main-section" id="Instalacion_manual">
+        <header>Instalacion manual</header>
+        <article>
+          <p>Un paquete de Vim es un directorio que contiene uno o más plugins:</p>
+          <ul>
+            <li>
+              De manera predeterminada, tienes los ajustes de Vim dentro de ~/.vim, así que ahí es donde Vim busca los plugins cuando lo lanzas.
+              <ul>
+                <li>Cuando arrancas Vim, lo que hace primero es procesar tu archivo .vimrc y después busca todas las carpetas en ~/.vim para encontrar plugins que estén contenidos en <code> pack/<nombre_paquete>/start.</code></li>
+                <li>
+                  De manera predeterminada, tu directorio ~/.vim (si incluso ya tienes uno) no tiene esa estructura de archivo, así que establécela mediante: <code>$ mkdir -p ~/.vim/pack/externo/start</code>
+                </li>
+                <li>
+                  Ahora puedes poner los plugins de Vim en ~/.vim/pack/externo/start, y estos se cargarán automáticamente cuando lances Vim.
+                </li>
+                <li>Por ejemplo, trata de instalar NERDTree,un gestor de archivos basado en texto para Vim. Primero utiliza Git para clonar una instantánea del código del repositorio de NERDTree:
+<code>$ git clone --depth 1 https://github.com/preservim/nerdtree.git </code></li>
+                <li><code>~/.vim/pack/externo/start/nerdtree
+</code></li>
+                <li>
+                  Ahora ejecuta Vim y escribe este comando:<code>:NERDTree</code>
+                  
+                </li>
+              </ul>
+            </li>
+
+            <li>Esto abrirá una vista de los archivos en la parte izquierda de tu ventana de Vim.</li>
+          </ul>
+          Oficialmente, Vim recomienda que cada proyecto de plugin tenga su propio directorio dentro de ~/.vim/pack. Por ejemplo, si estuvieras instalando el complemento NERDTree y el del ejemplo llamado foo, deberías crear esta estructura en la carpeta:
+          <code>$ mkdir -p ~/.vim/pack/NERDTree/start/ $ git clone --depth 1 </code>
+
+          <code>https://github.com/preservim/nerdtree.git</code>
+          <code>~/.vim/pack/NERDTree/start/NERDTree</code>
+          <code>$ mkdir -p ~/.vim/pack/foo/start/ $ git clone --depth 1</code>
+          <code>https://notabug.org/foo/foo.git ~/.vim/pack/foo/start/foo</code>
+          </article>
+      </section>
+      <section class="main-section" id="Gestor_de_paquetes">
+        <header>Gestor de paquetes</header>
+        <article>
+          Desde la versión 8 de Vim, los gestores de paquetes de Vim se han vuelto menos útiles, pero algunos usuarios todavía los prefieren debido a la posibilidad de auto actualizar varios plugins.
+Existen muchos gestores de paquetes en Vim entre los que escoger y cada uno es diferente, pero quizás
+vim-plug tiene algunas buenas características y la mejor documentación de todos ellos, lo que lo hace muy sencillo para comenzar con él y explorarlo en profundidad más adelante.
+
+          <code>instalando plugins mediante vim-plug</code>
+          Instala vim-plug de manera que se cargue y arranque mediante:
+          </p>
+          <code>$ curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+          </code>
+          <code>https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim</code>
+          Crea un archivo ~/.vimrc si no tiene uno ya, si ya lo tienes, añade en ese archivo:
+          <code>call plug#begin()
+Plug 'preservim/NERDTree'
+call plug#end()</code> Cada vez que quieras instalar un plugin, debes introducir el nombre y la ubicación del plugin entre las líneas plug#begin() y plug#end. (En el ejemplo anterior hemos vuelto a utilizar NERDTree para ilustrarlo.)
+Si el plugin que quieres no está en un repositorio en GitHub, entonces puedes añadir la URL completa en vez de solo el nombre del usuario y del proyecto en GitHub. Puedes «instalar» plugins locales fuera de tu directorio ~/.vim.
+Para finalizar, arranca Vim e indícale a vim-plug que instale los plugins listados en ~/.vimrc mediante el comando:
+          <code>:PlugInstall</code>
+          Espera a que los plugins se descarguen.
+        </article>
+      </section>
+      <section class="main-section" id="Actualizar_plugins">
+        <header>Actualizar plugins</header>
+        <article>
+         Editar el archivo ~/.vimrc y ejecutar un comando para que realice la instalación probablemente no parece que sirva para ahorrar mucho tiempo respecto del proceso de instalación manual, pero el beneficio real de utilizar vim-plug es a la hora de realizar actualizaciones de esos plugins.
+Para actualizar todos los plugins installados simplemente ejecuta en Vim el comando:
+      <code>:PlugUpdate</code> 
+          <p>
+            Si no quieres actualizar todos los plugins, puedes actualizar cada uno por separado añadiendo el nombre del plugin:
+          </p>
+          <code>:PlugUpdate NERDTree</code>
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="Restablecer_plugins">
+        <header>Restablecer plugins</header>
+        <article>
+          Otro beneficio de utilizar vim-plug es a la hora de exportar y la función de restablecer. Como sabe cada persona que utiliza Vim, la forma en la que Vim funciona es a menudo único a cada usuario, en parte debido al uso de plugins distintos.
+Una vez que das con los plugins que necesitas y que tienes instalados y configurados, la última cosa que quieres que pase es perderles la pista.
+Vim-plug tiene este comando para generar un script para restaurar todos los plugins actuales:
+          <ul>
+            <li><code>:PlugSnapshot ~/vim-plug.list</code></li>
+            <li>
+              Hay muchas otras funciones para vim-plug, así que lo mejor es acudir a la página de su documentación oficial.
+            </li>
+            <li>
+             <a href="https://github.com/junegunn/vim-plug" target="_blank">Encontrarás los plugins que mejor se adecuen a tus necesidades</a>
+            </li>
+          
+        </article>
+      </section>
+      <section class="main-section" id="Referencias">
+        <header>Referencias</header>
+        <article>
+        Toda la documentación fue sacada de las siguientes páginas
+          <ul>
+            <li><a href="hhttps://geekland.eu/atajos-de-teclado-y-comandos-para-usar-vim-eficientemente/" target="_blank">Geekland</a></li>
+            <li><a href="https://victorhckinthefreeworld.com/2020/02/19/como-instalar-plugins-de-vim/" target="_blank">Victor hack in the free world</a></li>
+            <li><a href="https://aprendolinux.com/como-usar-comandos-del-editor-vim-en-linux/" target="_blank">aprendo linux</a></li>
+            <li><a href="https://blog.desdelinux.net/usando-vim-tutorial-basico/" target="_blank">blog desde linux</a></li>
+            <li><a href="https://es.wikipedia.org/wiki/Vim" target="_blank">No podía faltar Wikipedia</a></li>
+            
+          </ul>
+        </article>
+      </section>
+    </main>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Learn About Vim</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav id="navbar">
       <header>JS Documentation</header>
       <ul>
         <li><a class="nav-link" href="#Introduction">Introducción</a></li>
