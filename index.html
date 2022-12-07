@@ -224,12 +224,14 @@ Nota: Un buffer es el contenido de un fichero de texto cargado en memoria listo 
           <p>
             Se desplaza entre las distintas pestañas hacia adelante
           </p>
-          <code>:gT</code>
+          <code>:gt</code>
 Función
           <p>
             Se desplaza entre las distintas pestañas hacia atrás
           </p>
-          <code>:tab ball</code>
+          
+          <code>:gT</code>
+
 Función
           <p>
             Todos los buffers abiertos se ponen en pestañas
@@ -237,24 +239,80 @@ Función
           <code>:tab ball</code>
 Función
           <p>
-            Todos los buffers abiertos se ponen en pestañas
+            Copiar el contenido de la ventana actual en una pestaña.
           </p>
-          <code>:tab ball</code>
+          <code>:tabsplit</code>
 Función
           <p>
-            Todos los buffers abiertos se ponen en pestañas
+            Listar todas las pestaña abiertas.
           </p>
-          <code>:tab ball</code>
+          <code>:tabs</code>
 Función
           <p>
-            Todos los buffers abiertos se ponen en pestañas
+            Ir a la pestaña siguiente
           </p>
-          <code>:tab ball</code>
+          <code>:gt o :tabn o Ctrl-Avpág</code>
 Función
           <p>
-            Todos los buffers abiertos se ponen en pestañas
+            Ir a la pestaña anterior
           </p>
-          <code>:tab ball</code>
+          <code>gT o :tabp o Ctrl-RePág</code>
+Función
+          <p>
+             Para irnos a la pestaña número 3 presionamos el número 3 seguido de la teclas gt.
+          </p>
+          <code>num_pestana+gt</code>
+Función
+          <p>
+            Ir a la primera pestaña.
+          </p>
+          <code>:tabfirst</code>
+Función
+          <p>
+            Ir a la última pestaña.
+          </p>
+          <code>:tablast</code>
+
+Función
+          <p>
+            Mueve la pestaña actual a la posición 3.
+          </p>
+          <code>:tabm 3</code>
+Función
+          <p>
+            Mover la pestaña actual a la primera posición
+          </p>
+          <code>:tabm 0</code>
+Función
+          <p>
+             Mover la pestaña actual a la última posición.
+          </p>
+          <code>:tabm</code>
+Función
+          <p>
+             Cierra la pestaña actual aunque no esté guardada.
+          </p>
+          <code>:tabclose! o :q!</code>
+Función
+          <p>
+            	Cierra la pestaña actual.
+          </p>
+          <code>:tabclose o :q</code>
+          Función
+          <p>
+            	Cerrar todas las pestañas excepto la pestaña actual.
+          </p>
+          <code>:tabonly</code>
+          Función
+          <p>
+            Abrir los ficheros archivo1.sh y archivo2.sh cada uno en una pestaña diferente.
+          </p>
+          <code>vim -p archivo1.sh archivo2.sh</code>
+
+
+
+
+
 
            
         </article>
