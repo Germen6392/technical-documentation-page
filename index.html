@@ -22,6 +22,10 @@
           <a class="nav-link" href="#Atajos_de_teclado">Atajos de teclado</a>
         </li>
         <li><a class="nav-link" href="#Trabajar_con_tab">Trabajar con tab</a></li>
+<li>
+          <a class="nav-link" href="#Split">Dividir Ventanas</a>
+	</li>
+
         <li>
           <a class="nav-link" href="#Plugins">Plugins</a>
         </li>
@@ -144,233 +148,234 @@ Nota: Un buffer es el contenido de un fichero de texto cargado en memoria listo 
       <section class="main-section" id="Atajos_de_teclado">
         <header>Atajos de Teclado</header>
         <article>
-          Función:
+  <h3>Función:</h3>
           <p>
            Abrir un fichero adicional dentro de VIM. El fichero abierto se mostrará en pantalla justo al abrirlo . Podemos tener abiertos varios documentos al mismo tiempo.<code>:e+ nombre_fichero por abrir</code>
           </p>
-          Función:
+<h3> Función:</h3>
           <p>
             Añadir un buffer sin que sea mostrado en pantalla.
             <code>:badd + nombre_del_fichero/buffer</code>
           </p>
-          Función:
+    <h3> Función:</h3>
           <p>
             Lista y numera todos los buffers/ficheros que tenemos abiertos.<code> :ls</code>
           </p>
-           Función:
+<h3> Función:</h3>
           <p>
             Ir al siguiente fichero/buffer que tenemos abierto. (Buffer_next).<code>:bn</code>
           </p>
-           Función:
+    <h3> Función:</h3>
           <p>
             Ir al fichero/buffer anterior que tenemos abierto. (Buffer_previous)<code>:bp</code>
           </p>
-           Función:
+<h3> Función:</h3>
           <p>
             Para ver en pantalla el último buffer abierto.<code>:bl</code>
           </p>
-           Función:
+    <h3> Función:</h3>
           <p>
             Mostrar en pantalla el primer buffer abierto.<code>:bf</code>
           </p>
-          Función:
+<h3> Función:</h3>
           <p>
             Si anteriormente hemos listado los buffer vemos que tienen asociado un número. Para cambiar de buffer podemos ejecutar el comando :b seguido del número de buffer. Por ejemplo :b2<code>:b_número_buffer</code>
           </p>
-          Función:
+    <h3> Función:</h3>
           <p>
             Cerrar únicamente el fichero/buffer actual que estamos editando.<code>:bd</code>
           </p>
-           Función:
+<h3> Función:</h3>
           <p>
             El comando :bd2 cierra el buffer 2.<code>:bd2</code>
           </p>
-           Función:
+    <h3>Función:</h3>
           <p>
             El comando :bd deuda.py cierra el buffer deuda.py.<code>:bd deuda.py</code>
           </p>
-           Función:
+<h3> Función:</h3>
           <p>
             Mostrar todos los buffer en pantalla.<code>:ba</code>
           </p>
         </article>
       </section>
-      <section class="main-section" id="Trabajar_con_tab">
+
+            <section class="main-section" id="Trabajar_con_tab">
         <header>Trabajar con tab</header>
         <article>
           <p>
             VIM permite trabajar con tabs (pestañas) similares a las que usaríamos en un navegador web. En cada una de las pestañas podemos tener abierto un fichero/buffer para poder editar código o texto. Los atajos de teclado y comandos que podemos usar para trabajar con las pestañas son:
           </p>
-           Función:
+          <h3> Función:</h3>
           <p>
             Abrir un fichero en una pestaña nueva.<code>:tabnew nombre_fichero</code>
           </p>
-           Función:
+          <h3> Función:</h3>
           <p>
             El fichero que queramos se abre en una pestaña nueva.
           </p>
           <code>:tabedit nombre_fichero</code>
-           Función:
+         <h3> Función:</h3>
           <p>
           Abre el fichero que queramos en una pestaña nueva. A medida que escribamos el nombre, si presionamos TAB se autocompletará el nombre del fichero. Solo autocompletará con nombres de ficheros que estén dentro de la ruta especificada en el path de VIM.
           </p>
           <code>:tabfind nombre_fichero</code>
-          Función
+         <h3> Función</h3>
           <p>
             Todos los buffers abiertos se ponen en pestañas
           </p>
           <code>:gt</code>
-          Función
+         <h3> Función</h3>
           <p>
             Se desplaza entre las distintas pestañas hacia adelante
           </p>
           <code>:gt</code>
-Función
+<h3>Función</h3>
           <p>
             Se desplaza entre las distintas pestañas hacia atrás
           </p>
           
           <code>:gT</code>
 
-Función
+<h3>Función</h3>
           <p>
             Todos los buffers abiertos se ponen en pestañas
           </p>
           <code>:tab ball</code>
-Función
+<h3>Función</h3>
           <p>
-<<<<<<< HEAD
-            Copiar el contenido de la ventana actual en una pestañas
+           Copiar el contenido de la ventana actual en una pestañas
           </p>
           <code>:tab split</code>
-Función
+<h3>Función</h3>
           <p>
             Listar todas las pestañas abiertas 
-=======
-            Copiar el contenido de la ventana actual en una pestaña.
-          </p>
+
+           </p>
           <code>:tabsplit</code>
-Función
+<h3>Función</h3>
           <p>
             Listar todas las pestaña abiertas.
->>>>>>> 558f953fab0dc9ceb0179357410c2c830ab75b58
+
           </p>
           <code>:tabs</code>
-Función
+<h3>Función</h3>
           <p>
             Ir a la pestaña siguiente
           </p>
-<<<<<<< HEAD
+
           <code>:gt o Ctrl-Avpag </code>
-=======
-          <code>:gt o :tabn o Ctrl-Avpág</code>
->>>>>>> 558f953fab0dc9ceb0179357410c2c830ab75b58
-Función
+
+<h3>Función</h3>
           <p>
             Ir a la pestaña anterior
           </p>
-<<<<<<< HEAD
+
           <code>gT o :tabp o Ctrl-Repag</code>
-Función
+<h3>Función</h3>
           <p>
             Para irnos a la pestaña número 3 presionamos el número 3 seguido de la teclas gt.
-=======
+
           <code>gT o :tabp o Ctrl-RePág</code>
-Función
+<h3>Función</h3>
           <p>
              Para irnos a la pestaña número 3 presionamos el número 3 seguido de la teclas gt.
->>>>>>> 558f953fab0dc9ceb0179357410c2c830ab75b58
+
           </p>
           <code>num_pestana+gt</code>
-Función
+<h3>Función</h3>
           <p>
-<<<<<<< HEAD
-            	Ir a la primera pestaña.
-=======
-            Ir a la primera pestaña.
->>>>>>> 558f953fab0dc9ceb0179357410c2c830ab75b58
-          </p>
+          	Ir a la primera pestaña.
+	  </p>
+          
           <code>:tabfirst</code>
-Función
+<h3>Función</h3>
           <p>
-<<<<<<< HEAD
-            	Ir a la última pestaña.
+          Ir a la última pestaña.
           </p>
           <code>:tablast</code>
-Función
+<h3>Función</h3>
           <p>
             	Mueve la pestaña actual a la posición 3.
           </p>
           <code>:tabm 3</code>
-          Función
+  <h3> Función</h3>
           <p>
             	Mover la pestaña actual a la primera posición.
           </p>
           <code>:tabm 0</code>
-          Función
+<h3> Función</h3>
           <p>
             Mover la pestaña actual a la última posición.
           </p>
           <code>:tabm</code>
-          Función
+    <h3> Función</h3>
           <p>
             Cierra la pestaña actual aunque no esté guardada.
           </p>
           <code>:tabclose! o :q!</code>
-          Función
-=======
-            Ir a la última pestaña.
+        <h3>Función</h3>
+
+         <p>
+   Ir a la última pestaña.
           </p>
           <code>:tablast</code>
 
-Función
+<h3>Función</h3>
           <p>
             Mueve la pestaña actual a la posición 3.
           </p>
           <code>:tabm 3</code>
-Función
+<h3>Función</h3>
           <p>
             Mover la pestaña actual a la primera posición
           </p>
           <code>:tabm 0</code>
-Función
+<h3>Función</h3>
           <p>
              Mover la pestaña actual a la última posición.
           </p>
           <code>:tabm</code>
-Función
+<h3>Función</h3>
           <p>
              Cierra la pestaña actual aunque no esté guardada.
           </p>
           <code>:tabclose! o :q!</code>
-Función
->>>>>>> 558f953fab0dc9ceb0179357410c2c830ab75b58
+<h3>Función</h3>
+
           <p>
             	Cierra la pestaña actual.
           </p>
           <code>:tabclose o :q</code>
-          Función
+    <h3> Función</h3>
           <p>
             	Cerrar todas las pestañas excepto la pestaña actual.
           </p>
           <code>:tabonly</code>
-          Función
+<h3> Función</h3>
           <p>
             Abrir los ficheros archivo1.sh y archivo2.sh cada uno en una pestaña diferente.
           </p>
           <code>vim -p archivo1.sh archivo2.sh</code>
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
->>>>>>> 558f953fab0dc9ceb0179357410c2c830ab75b58
-           
+         
         </article>
+
+      <section id="Split" class="split">
+		<h2>Dividir Ventanas</h3>
+		<p>Para trabajar con varios documentos se puede dividir una ventana en varias partes tanto vertical como horizontalmente con el comando split</p>
+		<code>:vsplit</code> 
+		<p>Divide la ventana verticalmente.</p>
+		<code>:split</code>
+		<p>Divide la ventana horizontalmente</p>
+		<code>CTRL + w</code>
+		<p>Permite desplazarse por las ventanas divididas con el comando split. Si acompañamos la combinación de teclas con hjkl se desplazará en el orden de las teclas</p>
+		<code>CTRL + w + < </code>
+		<p>Achicará el lado donde estemos posicionados</p>
+		<code>CTRL + - y CTRL + +</code>
+	<p>Achicará y agrandará el zoom de la terminal donde opera vim</p>
+</section>
       </section>
+
       <section class="main-section" id="Plugins">
         <header>Plugins</header>
         <article>
